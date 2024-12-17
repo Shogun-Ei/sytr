@@ -1,0 +1,295 @@
+/* Загальні стилі */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+/* Підключення локального шрифту mak */
+@font-face {
+   font-family: 'Mak';
+   src: url('/fonts/Mak-SemiBoldHigh.otf') format('opentype');
+}
+.bad-script-regular {
+   font-family: "Bad Script", cursive;
+   font-weight: 400;
+   font-style: normal;
+ }
+ 
+/* Тіло сторінки */
+body {
+   font-family: Arial, sans-serif;
+   background-image: url('/img/background.jpg');
+   background-size: cover;
+   color: #333;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 50vh;
+   padding: 20px;
+
+}
+
+/* Додано затемнення для фону */
+body::before {
+   content: "";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background: rgba(0, 0, 0, 0.5); /* Затемнення */
+   z-index: -1; /* Фон позаду всього */
+}
+
+/* Контейнер сайту */
+.container {
+   width: 1200px;
+   background-color: rgba(255, 255, 255, 0.8); /* Напівпрозорий білий фон */
+   border-radius: 10px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Інтенсивніша тінь */
+   display: flex;
+   flex-direction: column;
+   position: relative;
+   padding: 20px;
+   backdrop-filter: blur(10px); /* Розмиття для скляного ефекту */
+}
+.form-container{
+ /*  display: flex;
+   justify-content: center;
+   align-items: center;*/
+   background: rgba(255, 255, 255, 0.8);
+   padding: 15px; /* Трохи зменшені внутрішні відступи */
+   border-radius: 10px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+   width: 300px; /* Зменшена ширина */
+   text-align: center;
+   backdrop-filter: blur(10px);
+   margin: 0 auto;
+}
+ 
+/* Шапка */
+.header {
+   background-color: rgba(68, 68, 68, 0.9); /* Напівпрозорий темний фон */
+   color: #fff;
+   padding: 15px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   border-bottom: 2px solid #ccc;
+   border-radius: 5px; /* Додано закруглені кути */
+   position: sticky;
+   top: 10px;
+   z-index: 1000;
+}
+
+/* Посилання на логотип та заголовок */
+.header__link {
+   display: flex;
+   align-items: center;
+   text-decoration: none;
+   color: inherit;
+   gap: 10px;
+}
+
+.header__link:hover {
+   opacity: 0.9;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Логотип */
+.header__logo {
+   width: 50px;
+   height: auto;
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тінь логотипу */
+}
+
+/* Блок заголовку */
+.header__home {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+
+/* Заголовок сайту */
+.header__zagolovok {
+   font-family: 'Mak', sans-serif;
+   font-size: 30px; /* Збільшено розмір */
+   font-weight: bold;
+   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+   color: #baff39; /* Яскравий колір */
+}
+
+/* Навігація */
+.nav__list {
+   display: flex;
+   gap: 20px; /* Збільшено відстань між пунктами меню */
+   list-style: none;
+}
+
+/* Стилі пунктів меню */
+.nav__list a {
+   font-family: 'Playwrite HR Lijeva', sans-serif;
+   color: #eaeaea; /* Змінено колір на світліший */
+   text-decoration: none;
+   font-size: 20px; /* Збільшено розмір тексту */
+   font-weight: bold;
+   padding: 10px 15px; /* Додано внутрішні відступи */
+   transition: all 0.3s ease;
+   border-radius: 5px; /* Додано закруглені кути */
+}
+
+.nav__list a:hover {
+   color: #ffcc00;
+   background-color: rgba(0, 0, 0, 0.6); /* Темний фон при наведенні */
+   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Додано тінь */
+}
+.artf{
+   font-family: "Playwrite HR Lijeva", cursive;
+}
+.searchlab{
+   font-family: "Playwrite HR Lijeva", cursive;
+   display: flex;
+   font-size: 25px;
+   justify-content: center;
+   align-items: center;
+
+}
+.list_book{
+   font-family: 'Playwrite HR Lijeva', sans-serif;
+   color: #eaeaea; /* Змінено колір на світліший */
+   text-decoration: none;
+   font-size: 20px; /* Збільшено розмір тексту */
+   font-weight: bold;
+   padding: 10px 15px; /* Додано внутрішні відступи */
+   transition: all 0.3s ease;
+   border-radius: 5px; /* Додано закруглені кути */ 
+}
+/* Стилі для списку книг */
+ul.list_book {
+   padding: 10px;
+   margin: 20px 0;
+   background-color: rgba(255, 255, 255, 0.9);
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul.list_book li {
+   margin: 10px 0;
+   padding: 10px;
+   border-bottom: 1px solid #eee;
+   font-family: 'Bad Script', cursive;
+   font-size: 18px;
+   line-height: 1.6;
+   display: flex;
+   align-items: center;
+}
+
+ul.list_book li:last-child {
+   border-bottom: none;
+}
+
+ul.list_book a {
+   color: #000;
+   text-decoration: none;
+   transition: color 0.3s ease;
+   font-family: 'Playwrite HR Lijeva', sans-serif;
+   font-size: 20px;
+   font-weight: bold;
+   padding: 10px 15px;
+   border-radius: 5px;
+}
+
+ul.list_book a:hover {
+   color: #005999;
+}
+/* Основний контент */
+.main-content {
+
+   display: flex;
+   justify-content: space-between;
+   padding: 20px;
+   gap: 15px;
+   background-color: rgba(240, 240, 240, 0.9); /* Напівпрозорий фон для контенту */
+   border-radius: 10px; /* Закруглення контенту */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Лівий блок */
+.aside-left {
+   list-style-type: none;
+   width: 15%;
+   background-color: rgba(250, 250, 250, 0.9);
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   padding: 15px;
+   text-align: center;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для блоків */
+}
+
+/* Правий блок */
+.aside-right {
+   list-style-type: none;
+   width: 10%;
+   background-color: rgba(250, 250, 250, 0.9);
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   padding: 15px;
+   position: relative; /* Вирівнювання у своєму потоці */
+   text-align: center;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.aside-left__list{
+   list-style-type: none;
+}
+.aside-left__list img {
+   list-style-type: none;
+   width: 50px;
+   display: flex;
+   align-items: flex-start;
+   height: auto;
+   margin-bottom: 15px;
+   border-radius: 5px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Додано тінь для зображень */
+}
+.aside-left ul {
+   list-style-type: none; /* Забираємо маркери списку */
+   padding: 0; /* Прибираємо внутрішні відступи */
+   margin: 0; /* Прибираємо зовнішні відступи */
+   display: flex; 
+   flex-direction: column; /* Розташовуємо елементи у стовбець */
+   align-items: center; /* Вирівнюємо по центру */
+   gap: 15px; /* Відстань між зображеннями */
+}
+
+.aside-left ul img {
+   width: 100px; /* Розмір зображень за необхідності */
+   height: auto;
+   border-radius: 5px; /* Закруглені кути */
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тінь для зображень */
+   display: block; /* Забезпечуємо блоковий формат */
+}
+
+.content {
+   list-style-type: none;
+   flex-grow: 1;
+   background-color: rgba(255, 255, 255, 0.9);
+   border: 1px solid #ccc;
+   border-radius: 10px;
+   padding: 20px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+   line-height: 1.8; /* Покращена читабельність тексту */
+}
+
+/* Футер */
+.footer {
+   background-color: rgba(68, 68, 68, 0.9);
+   color: #fff;
+   text-align: center;
+   padding: 15px;
+   margin-top: 20px;
+   border-top: 2px solid #ccc;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Тінь для футера */
+}

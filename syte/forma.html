@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Форма входу</title>
+    <link rel="stylesheet" href="/css/forma.css">
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <!-- Підключення Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+HR+Lijeva:wght@100..400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="form-container">
+        <form action="submit_form.php" method="post">
+            <h2>Вхід</h2>
+            <p>Через соціальну мережу:</p>
+            <p>
+                <a href="https://www.facebook.com/" target="_blank">Facebook</a><br>
+                <a href="https://accounts.google.com/" target="_blank">Google</a>
+            </p>
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" maxlength="50" required autofocus>
+            <small>Електронну адресу необхідно буде підтвердити після реєстрації</small>
+
+            <label for="password">Пароль (не менше 6 символів)</label>
+            <input type="password" id="password" name="password" minlength="6" maxlength="20" required>
+
+            <label for="confirm_password">Підтвердьте пароль</label>
+            <input type="password" id="confirm_password" name="confirm_password" minlength="6" maxlength="20" required>
+
+            <label>
+                <input type="checkbox" name="remember_me"> Запам'ятати мене
+            </label>
+
+            <p>
+                <a href="register.html">Ще не зареєструвався? Реєструйся тут</a><br>
+                <a href="recover_password.html">Забули пароль? Відновити тут</a>
+            </p>
+            <button type="submit">Увійти</button>
+        </form>
+    </div>
+</body>
+</html>
